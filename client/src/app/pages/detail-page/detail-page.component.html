@@ -1,0 +1,10 @@
+<div *ngIf="link$ | async as l; else loading">
+  <h3>Ссылка подробно</h3>
+  <p>Ваша ссылка: <a href="{{l.to}}" target="_blank" rel="noopener noreferrer">{{l.to}}</a></p>
+  <p>Источник: <a href="{{l.from}}" target="_blank" rel="noopener noreferrer">{{l.from}}</a></p>
+  <p>Количество кликов по ссылке: <strong>{{l.clicks}}</strong></p>
+  <p>Дата создания: <strong>{{l.date | date: 'longDate':null:'ru'}}</strong></p>
+</div>
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>

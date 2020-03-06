@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "jwtSecret": "sulcus sinus superiror",
+  "mongoUri": "mongodb+srv://eduard:koker123456@cluster0-iz9ih.mongodb.net/api?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
+}

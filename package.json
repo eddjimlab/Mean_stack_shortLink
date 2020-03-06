@@ -1,0 +1,33 @@
+{
+  "name": "mean_stack",
+  "version": "1.0.0",
+  "description": "Mean stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
+  },
+  "keywords": [
+    "mean",
+    "angular"
+  ],
+  "author": "Batsev Eduard <jimalab@mail.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.0",
+    "config": "^3.2.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.4",
+    "mongoose": "^5.9.2",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.0",
+    "nodemon": "^2.0.2"
+  }
+}

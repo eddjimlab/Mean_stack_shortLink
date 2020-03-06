@@ -1,0 +1,32 @@
+<nav>
+  <div class="nav-wrapper amber darken-3">
+    <a href="#!" class="brand-logo">Сокращение ссылок</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down" *ngIf="auth.isAuthenticated()">
+      <li><a [routerLink]="['/create']">Создать</a></li>
+      <li><a [routerLink]="['/links']">Ссылки</a></li>
+      <li><a [routerLink]="['/']" (click)="logout($event)">Выйти</a></li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo" #sidenav>
+  <li>
+    <div class="user-view">
+      <h5>Сокращение ссылок</h5>
+    </div>
+    <!-- /.user-view -->
+  </li>
+  <li>
+    <div class="divider"></div>
+    <!-- /.divider -->
+  </li>
+  <li *ngIf="auth.isAuthenticated()"><a [routerLink]="['/create']">Создать</a></li>
+  <li *ngIf="auth.isAuthenticated()"><a [routerLink]="['/links']">Ссылки</a></li>
+  <li *ngIf="auth.isAuthenticated()"><a [routerLink]="['/']" (click)="logout($event)">Выйти</a></li>
+</ul>
+
+<div class="container">
+<router-outlet></router-outlet>
+</div>
+<!-- /.container -->

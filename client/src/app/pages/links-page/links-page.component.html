@@ -1,0 +1,27 @@
+<div *ngIf="links.length; else loading">
+  <table>
+    <thead>
+    <tr>
+      <th>№</th>
+      <th>Оргинальная</th>
+      <th>Сокращенная</th>
+      <th>Открыть</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let link of links; let idx = index">
+      <td>{{idx + 1}}</td>
+      <td><a href="{{link.from}}" target="_blank" rel="noreferrer noopener">{{link.from}}</a></td>
+      <td><a href="{{link.to}}" target="_blank" rel="noreferrer noopener">{{link.to}}</a></td>
+      <td>
+        <button class="waves-effect waves-yellow btn-flat" [routerLink]="['/detail/', link._id]">Открыть</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>
+

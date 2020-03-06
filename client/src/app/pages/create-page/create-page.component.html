@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col s8 offset-s2">
+    <form [formGroup]="form">
+          <div>
+            <div class="input-field">
+              <input
+                (keyup.enter)="onInput($event)"
+                placeholder="Введите ссылку"
+                id="link" type="text" formControlName="link">
+              <label for="link" #active class="active">Введите ссылку</label>
+            </div>
+          </div>
+    </form>
+  </div>
+  <!-- /.col s8 offset-s2 -->
+</div>
+<!-- /.row -->
